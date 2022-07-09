@@ -5,7 +5,9 @@
   "private": "true",
   "scripts": {
     "start": "npm-run-all --parallel",
-    "prepare": "husky install"
+    "dev": "npm-run-all --parallel client server",
+    "client": "npm run dev -w client",
+    "server": "npm run start:dev -w server"
   },
   "workspaces": [
     "apps/*"
