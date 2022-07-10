@@ -4,10 +4,10 @@ import { AppService } from './app.service';
 import { UserController } from './user/user.controller';
 import { UserModule } from './user/user.module';
 import { UserService } from './user/user.service';
-import { DogModule } from './dog/dog.module';
+import { LoginModule } from './login/login.module';
 
 @Module({
-  imports: [UserModule, DogModule],
+  imports: [UserModule, LoginModule],
   controllers: [AppController, UserController],
   providers: [AppService, UserService],
 })
