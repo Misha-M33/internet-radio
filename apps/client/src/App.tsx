@@ -14,7 +14,7 @@ function App() {
   //   setMessage(data?.message)
   // }
   return (
-    <div>
+    <div className="mainContainer">
       <LoginPage/>
       {/* <h1>Hello</h1>
       <h2>{message}</h2> */}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './LoginPage.css'
 // const BASE_URL = process.env
 const API_URL = import.meta.env.VITE_API_BASE_URL
 
@@ -16,11 +17,13 @@ const [pass, setPass] = useState('');
     })
   }
   return (
-    <div>
-      <div>
-        <input type="text" placeholder='email' onChange={(e) => setEmail(e.target.value)}/>
-        <input type="password" placeholder='password' onChange={(e) => setPass(e.target.value)}/>
-        <button onClick={handleSubmit}>Login</button>
+    <div className='loginFormContainer'>
+      <div className='loginForm'>
+        <label className='labelEmail' >email address</label>
+        <input className='emailForm' type="text" placeholder='email' onChange={(e) => setEmail(e.target.value)}/>
+        <label className='labelPass' >password</label>
+        <input className='passForm' type="password" placeholder='password' onChange={(e) => setPass(e.target.value)}/>
+        <button className='buttonLogin' onClick={handleSubmit}>Login</button>
       </div>
     </div>
   )
