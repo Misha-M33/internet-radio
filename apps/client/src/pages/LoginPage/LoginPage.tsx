@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import './LoginPage.css'
-// const BASE_URL = process.env
 const API_URL = import.meta.env.VITE_API_BASE_URL
 
 export const LoginPage = () => {
@@ -19,11 +19,12 @@ const [pass, setPass] = useState('');
   return (
     <div className='loginFormContainer'>
       <div className='loginForm'>
-        <label className='labelEmail' >email address</label>
-        <input className='emailForm' type="text" placeholder='email' onChange={(e) => setEmail(e.target.value)}/>
-        <label className='labelPass' >password</label>
-        <input className='passForm' type="password" placeholder='password' onChange={(e) => setPass(e.target.value)}/>
+        <label className='labelEmail' htmlFor='email'>Email</label>
+        <input className='emailForm' type="text" onChange={(e) => setEmail(e.target.value)}/>
+        <label className='labelPass' htmlFor='password'>Password</label>
+        <input className='passForm' type="password" onChange={(e) => setPass(e.target.value)}/>
         <button className='buttonLogin' onClick={handleSubmit}>Login</button>
+        <Link to='/register'>Register</Link>
       </div>
     </div>
   )
