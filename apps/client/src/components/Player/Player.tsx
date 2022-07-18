@@ -1,6 +1,7 @@
-import React, { useReducer } from 'react'
-import { StartButton } from '../StartButton/StartButton';
-import { playerInit, playerReducer, switchPlay } from './reducer';
+import React, { useCallback, useReducer } from 'react'
+import { StartButton } from './components/StartButton';
+import { Volume } from './components/Volume';
+import { playerInit, playerReducer, actionSwitchPlay, actionChangeVolume } from './reducer';
 
 export interface PlayerState {
   play: boolean;
@@ -13,9 +14,13 @@ export interface PlayerState {
 export const Player = () => {
   const [state, dispatch] = useReducer(playerReducer, playerInit(), playerInit);
 
+  const switchPlay = useCallback(() => dispatch(actionSwitchPlay()), [])
+  const changeVolume = useCallback((volume: number) => dispatch(actionChangeVolume(volume)), [])
+
   return (
     <div>
-      <StartButton startFunction={() => dispatch(switchPlay())} isPlaying={state.play}/>
+      <StartButton startFunction={switchPlay} isPlaying={state.play}/>
+      <Volume changeVolumeFunc={changeVolume}/>
     </div>
   )
 }
