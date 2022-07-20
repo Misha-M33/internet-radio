@@ -33,6 +33,6 @@ export function playerReducer(state: PlayerState, action: {type: string, payload
     }
 }
 
-export function switchPlay() {
+export function actionSwitchPlay() {
     return {type: SWITCH_PLAY}
 }

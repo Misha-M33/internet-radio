@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Player } from '../Player/Player'
-import { StartButton } from '../StartButton/StartButton'
 import styles from './style.module.css'
 
 export const NavBar = () => {
