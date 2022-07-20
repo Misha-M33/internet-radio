@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './StartButton.module.css'
+import style from '../Player.module.css'
 
 export const StartButton = ({startFunction, isPlaying}: {startFunction: () => void, isPlaying: boolean}) => {
 

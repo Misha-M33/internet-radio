@@ -7,8 +7,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    left: 100px;
+    top: 10px;
 }
 
 .startButton{
     transform: scale(0.4);
+}
+
+.volumeContainer{
+
 }
