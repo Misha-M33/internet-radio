@@ -9,6 +9,8 @@ export const MainPage = () => {
       <div>Other Content</div>
       <div>Some charts</div>
       <Link to={'/account'}><h1>Account</h1></Link>
+      <Link to={'/login'}><h1>Login</h1></Link>
+      <Link to={'/register'}><h1>Register</h1></Link>
     </div>
   )
 }

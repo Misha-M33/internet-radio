@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import style from './Register.module.css'
+import style from './Register.module.less'
 const API_URL = import.meta.env.VITE_API_BASE_URL
 
 export const RegisterPage = () => {
@@ -22,18 +22,18 @@ export const RegisterPage = () => {
   return (
     <div className={style.register} >
         <form  className={style.registerForm} >
-            <label className={style.labelName} htmlFor='email'>Name</label>
-            <input className={style.nameForm} onChange={(e) => setName(e.target.value)} type="text" name="name"/>
-            <label className={style.labelEmail}  htmlFor='email'>Email</label>
-            <input className={style.emailForm} onChange={(e) => setEmail(e.target.value)} type="text" name="email"/>
-            <label className={style.labelPass} htmlFor='password'>Password</label>
-            <input className={style.passForm} onChange={(e) => setPass(e.target.value)} type="password" name="password"/>
-            <label className={style.labelPass} htmlFor='password'>Password Confirm</label>
-            <input className={style.passForm} onChange={(e) => setPassConfirm(e.target.value)} type="password" name="confirm_password"/>
-            <button className={style.buttonRegister} >Registration</button>
+            <label htmlFor='name'>Name:</label>
+            <input onChange={(e) => setName(e.target.value)} type="text" name="name"/>
+            <label htmlFor='email'>Email:</label>
+            <input onChange={(e) => setEmail(e.target.value)} type="text" name="email"/>
+            <label htmlFor='password'>Password:</label>
+            <input onChange={(e) => setPass(e.target.value)} type="password" name="password"/>
+            <label htmlFor='confirm_password'>Confirm password:</label>
+            <input onChange={(e) => setPassConfirm(e.target.value)} type="password" name="confirm_password"/>
+            <button className={style.buttonRegister} >Register</button>
             <div className={style.toLogin} >
                 <Link className={style.toLoginLink} to={'/login'}>to Login</Link>
-            </div>           
+            </div>
         </form>
     </div>
   )

@@ -1,8 +1,4 @@
 .mainContainer{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(61, 46, 226);
-    background-image: url('/background.jpg');
-    background-clip: border-box;
-    background-size: cover;
 }

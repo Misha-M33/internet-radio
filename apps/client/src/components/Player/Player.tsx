@@ -15,7 +15,6 @@ export const Player = () => {
   const [state, dispatch] = useReducer(playerReducer, playerInit(), playerInit);
   const switchPlay = useCallback(() => dispatch(actionSwitchPlay()), [])
 
-  const switchPlay = useCallback(() => dispatch(actionSwitchPlay()), [])
   const changeVolume = useCallback((volume: number) => dispatch(actionChangeVolume(volume)), [])
 
   return (

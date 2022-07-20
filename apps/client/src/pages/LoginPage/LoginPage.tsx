@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import './LoginPage.css'
+import style from './LoginPage.module.less'
 const API_URL = import.meta.env.VITE_API_BASE_URL
 
 export const LoginPage = () => {
@@ -17,15 +17,15 @@ const [pass, setPass] = useState('');
     })
   }
   return (
-    <div className='loginFormContainer'>
-      <div className='loginForm'>
-        <label className='labelEmail' htmlFor='email'>Email</label>
-        <input className='emailForm' type="text" onChange={(e) => setEmail(e.target.value)}/>
-        <label className='labelPass' htmlFor='password'>Password</label>
-        <input className='passForm' type="password" onChange={(e) => setPass(e.target.value)}/>
-        <button className='buttonLogin' onClick={handleSubmit}>Login</button>
-        <div className='register' >
-          <Link className='registerLink' to='/register'>to Registration</Link>
+    <div className={style.loginFormContainer}>
+      <div className={style.loginForm}>
+        <label htmlFor='email'>Email</label>
+        <input type="text" name='email' onChange={(e) => setEmail(e.target.value)}/>
+        <label htmlFor='password'>Password</label>
+        <input type="password" name='password' onChange={(e) => setPass(e.target.value)}/>
+        <button className={style.buttonLogin} onClick={handleSubmit}>Login</button>
+        <div className={style.register}>
+          <Link className={style.registerLink} to='/register'>to Registration</Link>
         </div>
         
       </div>
