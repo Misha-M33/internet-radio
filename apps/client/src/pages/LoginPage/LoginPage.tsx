@@ -24,7 +24,10 @@ const [pass, setPass] = useState('');
         <label className='labelPass' htmlFor='password'>Password</label>
         <input className='passForm' type="password" onChange={(e) => setPass(e.target.value)}/>
         <button className='buttonLogin' onClick={handleSubmit}>Login</button>
-        <Link to='/register'>Register</Link>
+        <div className='register' >
+          <Link className='registerLink' to='/register'>to Registration</Link>
+        </div>
+        
       </div>
     </div>
   )
